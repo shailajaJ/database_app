@@ -1,0 +1,19 @@
+<%@ page import="java.util.*" %>
+<html>
+<body>
+<!--  create html -->
+<form action="todolistdemo.jsp">
+	add new item: <input type="text" name="theItem">
+	<br></br>
+	<input type="submit" value="submit">
+</form>
+
+<br>
+Item entered: <%= request.getParameter("theItem") %>
+<!--  add to do items -->
+<%= 
+	List<String> items = (List<String>) session.getAttribute("myToDoList");
+%>
+<!--  display list items for session -->
+</body>
+</html>
